@@ -24,7 +24,7 @@ public class MyDropboxClient{
 	
 	public void startconnection(String serverHost, int serverPort) throws Exception{
 		socket = (SSLSocket) sslsocketfactory.createSocket(InetAddress.getByName(serverHost), serverPort);
-		
+		socket.close();
 	}
 	
 	public static void watchFile(){
